@@ -2,3 +2,7 @@ test262-es5-tests/
 
 test262.js
 /compiler.jar
+
+node_modules/
+.DS_Store
+package-lock.json
