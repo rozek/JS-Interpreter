@@ -1,0 +1,35 @@
+{
+  "name": "js-interpreter",
+  "version": "0.0.1",
+  "description": "a sandboxed JavaScript interpreter in JavaScript",
+  "source": "acorn_interpreter.js",
+  "main": "acorn_interpreter.js",
+  "module": "./dist/acorn_interpreter.esm.js",
+  "browser": "./dist/acorn_interpreter.esm.js",
+  "exports": {
+  	".":{
+  		"import":"./dist/acorn_interpreter.esm.js",
+  		"require":"acorn_interpreter.js"
+  	}
+  },
+  "keywords": [],
+  "author": "Neil Fraser <neil.fraser@gmail.com> (https://neil.fraser.name/)",
+  "license": "Apache 2.0",
+  "homepage": "https://github.com/NeilFraser/JS-Interpreter",
+  "bugs": {
+    "url": "https://github.com/NeilFraser/JS-Interpreter/issues"
+  },
+  "scripts": {
+    "compile": "./compile.sh",
+    "build": "rimraf ./dist && npx -p typescript -p cjstoesm cjstoesm acorn_interpreter.js ./dist && mv ./dist/acorn_interpreter.js ./dist/acorn_interpreter.esm.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NeilFraser/JS-Interpreter.git"
+  },
+  "devDependencies": {
+    "rimraf": "^3.0.2"
+  },
+  "dependencies": {
+  }
+}
